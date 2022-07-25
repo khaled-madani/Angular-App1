@@ -1,1 +1,32 @@
-<p>person works!</p>
+<h1>Welcome To Angular2 <span [style.color]="'red'">Event Binding
+
+</span></h1>
+<div>
+  <div *ngIf="!formStatus" [className]="'error'">
+    please fill and verify all inputs
+  </div>
+  <div>
+    <input type="text" name="name" id="" (change)="onNameChange($event.target.value)">
+  </div>
+  <div>
+    <input type="text" name="email" id="" (change)="onEmailChange($event)">
+  </div>
+  <div>
+    <input type="text" name="password" id="" (change)="onPasswordChange($event)">
+  </div>
+  <div>
+    <button (click)="onCreateForm()" [disabled]="isDisabled">Create</button>
+  </div>
+</div>
+<div>
+  <div [className]="'container'">
+    <div>
+      <img src="assets/code.png" alt="" width="300" [className]="saturate" [className]="grayscale">
+      <div [style.padding-left]="'10px'">
+        <h3>Title: <span>WWEDWDD</span></h3>
+        <button (click)="saturateClick()">saturate</button>
+        <button (click)="grayscaleClick()">grayscale</button>
+      </div>
+    </div>
+  </div>
+</div>

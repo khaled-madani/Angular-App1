@@ -1,0 +1,70 @@
+.error{
+  background-color: rgb(255, 97, 97);
+  padding: 15px;
+  font-weight: bold;
+  color: white;
+  display: block;
+  width: 80%;
+  height: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: block;
+  font-size: large;
+}
+input{
+  margin: 10px;
+  width: 80%;
+  height: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  outline: none;
+}
+
+button{
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: large;
+  transition: 0.3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  -moz-transition: 0.3s all ease-in-out;
+  -ms-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  margin-right: 5px;
+}
+
+button:hover{
+  background-color: white;
+  color: black;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: fit-content;
+  border: 2px solid black;
+  height: 380px;
+}
+.container .saturate {
+  filter: saturate(1000);
+  -webkit-filter: saturate(1000);
+}
+.container .grayscale {
+  filter: grayscale(100);
+  -webkit-filter: grayscale(100);
+}
