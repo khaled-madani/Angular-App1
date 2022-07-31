@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Person2ProMaxComponent } from './person2-pro-max.component';
+import { ThirdAppComponent } from './third-app.component';
 
-describe('Person2ProMaxComponent', () => {
-  let component: Person2ProMaxComponent;
-  let fixture: ComponentFixture<Person2ProMaxComponent>;
+describe('ThirdAppComponent', () => {
+  let component: ThirdAppComponent;
+  let fixture: ComponentFixture<ThirdAppComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Person2ProMaxComponent ]
+      declarations: [ ThirdAppComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Person2ProMaxComponent);
+    fixture = TestBed.createComponent(ThirdAppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

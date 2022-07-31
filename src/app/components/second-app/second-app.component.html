@@ -1,0 +1,5 @@
+<p>second-app works!</p>
+<h2>{{ nameCountry }}</h2>
+<h1 *ngIf="onStreet">Is loading........</h1>
+<div >this is Data coming to sub component:{{ streetName }}</div>
+<app-third-app [countryName2]="nameCountry" (NameStreet)="onNameStreet($event)"  (NameSSSS)="onNameSSSS($event)"></app-third-app>

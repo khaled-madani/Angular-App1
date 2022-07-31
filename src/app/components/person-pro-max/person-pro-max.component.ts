@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-person-pro-max',
   templateUrl: './person-pro-max.component.html',
   styleUrls: ['./person-pro-max.component.scss']
 })
-export class PersonProMaxComponent implements OnInit {
+export class PersonProMaxComponent implements OnInit , AfterViewInit{
 
-  constructor() { }
+  constructor() { } // initialized class
 
-  ngOnInit(): void {
+  ngOnInit(): void {  // initialized component
   }
 
+  ngAfterViewInit(): void { // initialized View(html)
+    throw new Error('Method not implemented.');
+  }
 }

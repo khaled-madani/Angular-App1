@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 // decorator component => metadata
 @Component({
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html', // path HTML to component
   styleUrls: ['./app.component.scss'] // Array inside paths CSS to component
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit,AfterViewInit{
   // this file name app.component.ts
   // file name => app-secendPar.component.ts
   //file names html  like this =>app-secendPar.component.html
@@ -42,7 +42,13 @@ export class AppComponent implements OnInit{
   isDisabled: boolean= true;
   changeHtml:string= '<h2>WELCOME TO ANGULAR APPLICATION</h2>';
   className:string= 'darkred';
-  ngOnInit(): void {
+  constructor() {  // initialized class
+    console.log('constructor ........AppComponent');
+
+  }
+  ngOnInit(): void {  // initialized component
+    console.log('ngOnInit ........AppComponent');
+
     setTimeout(()=>{
       this.user ={name:'Ali',age:33}
       this.isloggedIn = true
@@ -64,5 +70,11 @@ export class AppComponent implements OnInit{
     // this.names.forEach(item => {
     //   data+=`<div>${item}</div>`
     // })
+  }
+
+  ngAfterViewInit(): void {  // initialized View(html)
+    console.log('ngAfterViewInit ........AppComponent');
+
+    // throw new Error('Method not implemented.');
   }
 }

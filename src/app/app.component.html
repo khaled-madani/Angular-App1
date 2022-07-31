@@ -1,64 +1,72 @@
 
 
+<div [ngStyle]="{'display': 'flex','flex-wrap':'wrap'}">
+  <div [ngStyle]="{'width':'100%','display':'block'}">
+    <!-- directive  -->
+    <div [className]="'parent'">
+      <div class="w-50 left">
+        <h1>{{ title }}</h1>
 
-<!-- directive  -->
-<div [className]="'parent'">
-  <div class="w-50 left">
-    <h1>{{ title }}</h1>
+        <h1>{{ name }}</h1>
+        <!-- {{ salary }} this private state -->
 
-    <h1>{{ name }}</h1>
-    <!-- {{ salary }} this private state -->
+        <div *ngIf="isloggedIn">
+          <div><strong>Name</strong>:<span *ngIf="user && user.name">{{ user.name }}</span></div>
+          <div><strong>Age</strong>:<span>{{ user?.age }}</span></div>
 
-    <div *ngIf="isloggedIn">
-      <div><strong>Name</strong>:<span *ngIf="user && user.name">{{ user.name }}</span></div>
-      <div><strong>Age</strong>:<span>{{ user?.age }}</span></div>
+          <div *ngFor="let item of names;let i = index">
+            <div>{{ i }}- {{ item }}</div>
+          </div>
+        </div>
 
-      <div *ngFor="let item of names;let i = index">
-        <div>{{ i }}- {{ item }}</div>
+        <button [disabled]="isDisabled" >Click</button>
+        <!-- can you add three thing in one tag (proparty , class , style )binding -->
+        <div [innerHtml]="changeHtml" [className]="className" [style.font-size]="'20px'"><h2></h2></div>
+        <div>
+          <!-- Attribute binding -->
+          <img [src]="'assets/code.png'" [attr.alt]="'code image'" title="image" [width]="150">
+          <a href="" [attr.alt]="'alt title'" [target]="'_blank'" [title]="'Iam title'" [attr.aria-label]="'labe  '">LINK</a>
+          <div [className]="'nameClass'"></div>
+          <div [style.font-size]="'10'"></div>
+          <table [border]="1" [cellPadding]="5" [cellSpacing]="5">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>age</th>
+                <th>Avg</th>
+                <th>Actions <button>+</button></th>
+              </tr>
+            </thead>
+            <tbody *ngIf="usersTab && usersTab.length > 0">
+              <tr *ngFor="let item of usersTab;let i = index">
+                <td *ngIf="item.status" [style.color]="'red'" [style.font-size]="'15px'" [style.font-weight]="'bold'">{{ item.name }}</td>
+                <td *ngIf="item.status" [style.color]="'green'">{{ item.age }}</td>
+                <td *ngIf="item.status" [style.color]="'blue'">{{ item.avg }}</td>
+                <td *ngIf="item.status">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div *ngFor="let item of usersTab;let i = index;">
+          <h3><span>{{ i }}</span> {{ item.name }}</h3>
+        </div>
+        <div  [style.padding]="'5px'">
+          <h1>Data Binding</h1>
+          <div *ngFor="let item of data;let i = index">
+            <ul>
+              <li><h3>{{ item.name }} :  {{ item.desc }}</h3></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-50 right">
+        <app-person></app-person>
       </div>
     </div>
-
-    <button [disabled]="isDisabled" >Click</button>
-    <!-- can you add three thing in one tag (proparty , class , style )binding -->
-    <div [innerHtml]="changeHtml" [className]="className" [style.font-size]="'20px'"><h2></h2></div>
-    <div>
-      <!-- Attribute binding -->
-      <img [src]="'assets/code.png'" [attr.alt]="'code image'" title="image" [width]="150">
-      <a href="" [attr.alt]="'alt title'" [target]="'_blank'" [title]="'Iam title'" [attr.aria-label]="'labe  '">LINK</a>
-      <div [className]="'nameClass'"></div>
-      <div [style.font-size]="'10'"></div>
-      <table [border]="1" [cellPadding]="5" [cellSpacing]="5">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>age</th>
-            <th>Avg</th>
-            <th>Actions <button>+</button></th>
-          </tr>
-        </thead>
-        <tbody *ngIf="usersTab && usersTab.length > 0">
-          <tr *ngFor="let item of usersTab;let i = index">
-            <td *ngIf="item.status" [style.color]="'red'" [style.font-size]="'15px'" [style.font-weight]="'bold'">{{ item.name }}</td>
-            <td *ngIf="item.status" [style.color]="'green'">{{ item.age }}</td>
-            <td *ngIf="item.status" [style.color]="'blue'">{{ item.avg }}</td>
-            <td *ngIf="item.status">&nbsp;</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
-    <div *ngFor="let item of usersTab;let i = index;">
-      <h3><span>{{ i }}</span> {{ item.name }}</h3>
-    </div>
-    <div  [style.padding]="'5px'">
-      <h1>Data Binding</h1>
-      <div *ngFor="let item of data;let i = index">
-        <ul>
-          <li><h3>{{ item.name }} :  {{ item.desc }}</h3></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="w-50 right">
-    <app-person></app-person>
+  <div [ngStyle]="{'width':'100%', 'border-top':'5px solid black','padding':'10px'}">
+    <app-person-pro [userData]="name"></app-person-pro>
+    <app-first-app></app-first-app>
   </div>
 </div>
+

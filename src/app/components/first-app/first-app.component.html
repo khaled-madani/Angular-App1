@@ -1,0 +1,7 @@
+<hr [ngStyle]="{'height':'10px','background-color':'#000'}">
+<p>first-app works!</p>
+<label for="">Country Name </label>
+<input type="text" [(ngModel)]="country">
+<h1>{{ country }}</h1>
+
+<app-second-app [countryName]="country"></app-second-app>

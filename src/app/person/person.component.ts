@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class PersonComponent{
   isDisabled:boolean = false;
   name:string= '';
-  email:string= '';
+  email:string= 'Email:';
   password:string= '';
   formStatus: boolean= true
   saturate:string='';
   grayscale:string='';
-
+  userName:string='userName:'
 
 
   onCreateForm():void{

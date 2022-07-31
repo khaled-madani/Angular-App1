@@ -1,1 +1,36 @@
-<p>person-pro works!</p>
+<h1>Angular Directives: </h1>
+<!-- this name send from app component -->
+{{userData}}
+
+
+
+<h2>NgClass</h2>
+<div [ngClass]="'bold red'">
+  NgClass Directive Array.....
+</div>
+
+<div [ngClass]="['bold','red']">
+  NgClass Directive Array.....
+</div>
+
+<!-- These are same meaning-->
+<div [ngClass]="ngClassArr">
+  NgClass Directive Array.....
+</div>
+
+
+<div [ngClass]="{'bold':true,'red':false,'border-black':isBorderBlack}">
+  NgClass Directive Class.....
+</div>
+
+
+<h2 [ngStyle]="{'background-color':colorDiv,'color':'white'}">NgStyle</h2>
+
+<div [ngStyle]="{'font-size.px':scaleSize,'background-color':colorDiv,'color':'white','font-weight':fontWeight}">
+  NgClass Directive Class.....
+  <button [ngStyle]="{'background-color':'green'}" (click)="scaleSizeFin()">Scale +</button>
+  <button [ngStyle]="{'background-color':'red'}" (click)="scaleSizeFin2()">Scale -</button>
+  <div [ngStyle]="{'display':'inline'}">
+    <button *ngFor="let item of colorList; let i = index" [ngStyle]="{'background-color':item}" (click)="onClickSpan($event.target.value)" [value]="item" ></button>
+  </div>
+</div>

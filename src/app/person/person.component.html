@@ -1,6 +1,7 @@
 <h1>Welcome To Angular2 <span [style.color]="'red'">Event Binding
-
 </span></h1>
+<h1>{{ userName }}</h1>
+<h1>{{ email }}</h1>
 <div>
   <div *ngIf="!formStatus" [className]="'error'">
     please fill and verify all inputs
@@ -9,10 +10,16 @@
     <input type="text" name="name" id="" (change)="onNameChange($event.target.value)">
   </div>
   <div>
-    <input type="text" name="email" id="" (change)="onEmailChange($event)">
+    <input type="text" name="email" id="" (keydown)="onEmailChange($event)">
   </div>
   <div>
     <input type="text" name="password" id="" (change)="onPasswordChange($event)">
+  </div>
+  <div>
+    <input type="text" name="userName" id="" [(ngModel)]="userName">
+  </div>
+  <div>
+
   </div>
   <div>
     <button (click)="onCreateForm()" [disabled]="isDisabled">Create</button>

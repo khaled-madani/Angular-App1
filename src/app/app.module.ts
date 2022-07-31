@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { PersonComponent } from './person/person.component';
 import { PersonProComponent } from './components/person-pro/person-pro.component';
 import { PersonProMaxComponent } from './components/person-pro-max/person-pro-max.component';
-import { Person2ProMaxComponent } from './components/person2-pro-max/person2-pro-max.component';
-import { PersonTwoComponent } from './components/person-two/person-two.component';
-import { PersonThreeComponent } from './components/person-three/person-three.component';
+import { FormsModule } from '@angular/forms';
+import { FirstAppComponent } from './components/first-app/first-app.component';
+import { SecondAppComponent } from './components/second-app/second-app.component';
+import { ThirdAppComponent } from './components/third-app/third-app.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import { PersonThreeComponent } from './components/person-three/person-three.com
     PersonComponent,
     PersonProComponent,
     PersonProMaxComponent,
-    Person2ProMaxComponent,
-    PersonTwoComponent,
-    PersonThreeComponent
+    FirstAppComponent,
+    SecondAppComponent,
+    ThirdAppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent] // render to component in index.html

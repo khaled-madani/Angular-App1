@@ -1,0 +1,40 @@
+div{
+  padding: 5px;
+  margin-bottom: 15px;
+  color: black;
+
+}
+.bold{
+  font-weight: bold;
+}
+.red{
+  background-color: red;
+}
+.border-black{
+  border: 2px solid black;
+}
+.border-radius-8{
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+}
+
+button{
+  padding: 8px;
+  margin-right: 5px;
+  outline: none;
+  color: white;
+  font-size:large ;
+
+}
+span{
+  width: fit-content;
+  padding: 5px;
+  margin-right: 5px;
+}
+button:hover{
+  border:2px solid white
+}
