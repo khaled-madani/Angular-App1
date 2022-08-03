@@ -12,7 +12,7 @@ export class AppComponent implements OnInit,AfterViewInit{
   //file names html  like this =>app-secendPar.component.html
   //file names css or scss like this =>app-secendPar.component.css or scss
   title: string = 'AngularApp1';
-  name: string = 'khlaed';
+  name: string = 'KHALED';
   private salary: number = 2000; // private and only accessible within class and you can't used private state in HTML
   user:{
     name:string,
@@ -46,6 +46,7 @@ export class AppComponent implements OnInit,AfterViewInit{
     console.log('constructor ........AppComponent');
 
   }
+
   ngOnInit(): void {  // initialized component
     console.log('ngOnInit ........AppComponent');
 

@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonComponent } from './person/person.component';
 import { PersonProComponent } from './components/person-pro/person-pro.component';
 import { PersonProMaxComponent } from './components/person-pro-max/person-pro-max.component';
-import { FormsModule } from '@angular/forms';
 import { FirstAppComponent } from './components/first-app/first-app.component';
 import { SecondAppComponent } from './components/second-app/second-app.component';
 import { ThirdAppComponent } from './components/third-app/third-app.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,17 @@ import { ThirdAppComponent } from './components/third-app/third-app.component';
     SecondAppComponent,
     ThirdAppComponent
   ],
-  imports: [
+
+  imports:[
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent] // render to component in index.html
+  bootstrap: [AppComponent], // render to component in index.html
+  exports: [
+    FirstAppComponent,
+  ]
 })
 export class AppModule { }

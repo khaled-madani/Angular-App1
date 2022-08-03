@@ -22,7 +22,8 @@
 
   </div>
   <div>
-    <button (click)="onCreateForm()" [disabled]="isDisabled">Create</button>
+    <!-- <button (click)="onCreateForm()" [disabled]="isDisabled">Create</button> -->
+    <app-button [label]="'Create'" [classes]="'bg-red'" (onClick)="onCreateForm()"  (props)="isDisabled" ></app-button>
   </div>
 </div>
 <div>
@@ -31,8 +32,10 @@
       <img src="assets/code.png" alt="" width="300" [className]="saturate" [className]="grayscale">
       <div [style.padding-left]="'10px'">
         <h3>Title: <span>WWEDWDD</span></h3>
-        <button (click)="saturateClick()">saturate</button>
-        <button (click)="grayscaleClick()">grayscale</button>
+        <!-- <button (click)="saturateClick()">saturate</button> -->
+        <app-button [label]="'saturate'"     [classes]="'bg-blue '" (onClick)="saturateClick()" ></app-button>
+        <!-- <button (click)="grayscaleClick()">grayscale</button> -->
+        <app-button [label]="'grayscale'"  [classes]="'bg-green '" (onClick)="grayscaleClick()" ></app-button>
       </div>
     </div>
   </div>
