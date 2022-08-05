@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 
 @Component({
@@ -9,16 +10,15 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input() label:string=''
   @Input('classes') classBtn:string = ''
-  @Output('props') props:EventEmitter<any> = new EventEmitter<any>()
-  @Output('onClick') clickBut:EventEmitter<string> = new EventEmitter<string>()
-  constructor() { }
+  @Output('onClick') clickBut:EventEmitter<any> = new EventEmitter<any>()
+  constructor(private sharedService: SharedService) { }
 
   click(){
-    this.clickBut.emit('massageHi')
+    console.log( `shared actions for all buttons ${this.label} , ${this.classBtn}`);
+    this.clickBut.emit()
   }
-  propss(){
-    this.props.emit()
-  }
+
+
   ngOnInit(): void {
   }
 

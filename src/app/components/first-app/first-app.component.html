@@ -3,5 +3,8 @@
 <label for="">Country Name </label>
 <input type="text" [(ngModel)]="country">
 <h1>{{ country }}</h1>
-
+<h2>This value coming from shared Servics</h2>
+<div *ngFor="let item of sharedService.getElemants();">
+  {{ item }}
+</div>
 <app-second-app [countryName]="country"></app-second-app>

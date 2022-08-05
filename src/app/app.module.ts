@@ -11,6 +11,8 @@ import { FirstAppComponent } from './components/first-app/first-app.component';
 import { SecondAppComponent } from './components/second-app/second-app.component';
 import { ThirdAppComponent } from './components/third-app/third-app.component';
 import { SharedModule } from './shared/shared.module';
+import { AppService } from './services/app.service';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -20,16 +22,16 @@ import { SharedModule } from './shared/shared.module';
     PersonProMaxComponent,
     FirstAppComponent,
     SecondAppComponent,
-    ThirdAppComponent
+    ThirdAppComponent,
   ],
 
   imports:[
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    SharedModule
+    SharedModule,
+    LayoutModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent], // render to component in index.html
   exports: [
     FirstAppComponent,

@@ -16,14 +16,14 @@
     <input type="text" name="password" id="" (change)="onPasswordChange($event)">
   </div>
   <div>
-    <input type="text" name="userName" id="" [(ngModel)]="userName">
+    <input type="text" name="userName" id="" [(ngModel)]="userName" >
   </div>
   <div>
 
   </div>
   <div>
     <!-- <button (click)="onCreateForm()" [disabled]="isDisabled">Create</button> -->
-    <app-button [label]="'Create'" [classes]="'bg-red'" (onClick)="onCreateForm()"  (props)="isDisabled" ></app-button>
+    <app-button [label]="'Create'" [classes]="'bg-red'" (onClick)="onCreateForm()"  (onClick)="isDisabled" ></app-button>
   </div>
 </div>
 <div>

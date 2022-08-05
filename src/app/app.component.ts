@@ -46,7 +46,10 @@ export class AppComponent implements OnInit,AfterViewInit{
     console.log('constructor ........AppComponent');
 
   }
-
+  loadPage:number=1
+  loadCopmonent(number:number){
+    this.loadPage = number
+  }
   ngOnInit(): void {  // initialized component
     console.log('ngOnInit ........AppComponent');
 

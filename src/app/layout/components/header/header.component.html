@@ -1,0 +1,13 @@
+<header>
+  <div [ngClass]="'pull-left website-title'">  Web Site Title Name</div>
+  <div *ngIf="user" [ngClass]="'pull-right user-auth'">
+    <div>
+      {{ user.name }}
+    </div>
+    <div>
+      {{ user.email }}
+    </div>
+
+  </div>
+  <div [ngClass]="'clear'"></div>
+</header>

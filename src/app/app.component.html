@@ -1,5 +1,9 @@
+<button (click)="loadCopmonent(1)">index page </button>
+<button (click)="loadCopmonent(2)">first page </button>
+<button (click)="loadCopmonent(3)">third page </button>
 
-<div [ngStyle]="{'display': 'flex','flex-wrap':'wrap'}">
+<app-header></app-header>
+<div *ngIf="loadPage === 1" [ngStyle]="{'display': 'flex','flex-wrap':'wrap'}">
   <div [ngStyle]="{'width':'100%','display':'block'}">
     <!-- directive  -->
     <div [className]="'parent'">
@@ -67,4 +71,6 @@
     <app-first-app></app-first-app>
   </div>
 </div>
-
+<app-first-app *ngIf="loadPage === 2"></app-first-app>
+<app-third-app *ngIf="loadPage === 3"></app-third-app>
+<app-footer></app-footer>
