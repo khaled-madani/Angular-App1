@@ -1,7 +1,7 @@
 <button (click)="loadCopmonent(1)">index page </button>
 <button (click)="loadCopmonent(2)">first page </button>
 <button (click)="loadCopmonent(3)">third page </button>
-
+<!-- this is app component  -->
 <app-header></app-header>
 <div *ngIf="loadPage === 1" [ngStyle]="{'display': 'flex','flex-wrap':'wrap'}">
   <div [ngStyle]="{'width':'100%','display':'block'}">
